@@ -54,7 +54,7 @@ def basket_price_mc_cv(
     '''
     #price3 = Analytic Price based on Normal Model
     price3 = basket_price_norm_analytic(
-        strike, spot, vol, weights, texp, cor_m, intr, divr, cp_sign)
+        strike, spot, spot*vol, weights, texp, cor_m, intr, divr, cp_sign)
     
     # return two prices: without and with CV
     return [price1, price1 + (price3 - price2)] 
